@@ -13,17 +13,18 @@
         </template>
 
           <template v-slot:slot-footer>
-          <button type="button" class="btn btn-outline-primary" @click="ToggleModal">Aceptar</button>
+          <button type="button" class="btn btn-outline-primary" @click="ToggleModal2">Aceptar</button>
         </template>
     </ModalBootstrap>
   </div>
-
   <div v-else>
             <!-- Button trigger modal -->
     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" @click="ToggleModal">
     Hacer el cambio de moneda
     </button>
+    <div class="mensajeFinal" v-if="isClosed">Has hecho el cambio de moneda</div>
   </div>
+  
 </template>
 
 <script src="../scripts/padre.js"></script>

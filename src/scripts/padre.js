@@ -4,6 +4,7 @@ export default {
     return {
       change1: "",
       showModal: false,
+      isClosed: false,
     };
   },
   components: {
@@ -17,6 +18,10 @@ export default {
   methods: {
     ToggleModal() {
       this.showModal = !this.showModal;
+    },
+    ToggleModal2() {
+      this.showModal = !this.showModal;
+      this.isClosed = !this.isClosed;
     },
   },
 };
