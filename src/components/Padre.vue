@@ -1,6 +1,6 @@
 <template>
   <div v-if="showModal">
-    <ModalBootstrap>
+    <ModalBootstrap :change1="change1">
         <template v-slot:slot-header>
               <h5 class="modal-title" id="exampleModalLabel">MoneyExchange</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -9,7 +9,7 @@
           <template v-slot:slot-body>
               <h4>Cambio de moneda</h4>
             <input type="text" autofocus required v-model.number="change1">
-            <p id="texto-modal">El cambio de {{change1 }}€ en dolares son {{ change1 | changeMoney }} </p>
+            
         </template>
 
           <template v-slot:slot-footer>

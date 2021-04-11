@@ -8,7 +8,8 @@
               <slot name="slot-header"></slot>
             </div>
             <div class="modal-body">
-              <slot name="slot-body"></slot>
+              <slot name="slot-body" v-bind="ChangeNumber(change1)" ></slot>
+              <p id="texto-modal">El cambio de {{ euros }}€ en dolares son {{ euros | changeMoney }}$ </p>
             </div>
             <div class="modal-footer">
               <slot name="slot-footer"></slot>
